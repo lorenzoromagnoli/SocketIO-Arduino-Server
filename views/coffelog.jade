@@ -1,0 +1,26 @@
+extends layout
+
+block head
+	link(rel='stylesheet', href='/stylesheets/dc.css')
+
+block content
+	script(src='/javascripts/d3.min.js')
+	script(src='/javascripts/jquery-1.11.0.min.js')
+	script(src='/javascripts/crossfilter.min.js')
+	script(src='/javascripts/dc.js')
+	
+	
+	h1.
+		COFFEE LOGS
+	#chart
+	#chart1
+	#chart2
+	#table
+	
+	
+	script.
+		var coffelogdata = !{JSON.stringify(coffelog)};
+	script(src='/javascripts/coffeviz.js')
+	
+		
+		
